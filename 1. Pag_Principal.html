@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../CSS/PaginaconMenu.css">
+</head>
+	<header class="header1"> 
+		<h1>PHOTO-STOCK</h1>
+	</header>
+	<body>
+		<nav>
+			<ul>
+				<li><a href="1. Pag_Principal.html">Inicio</a></li>
+				<li><a href="2. Acerca de.html">Acerca de</a></li>
+				<li><a href="3. Galeria.html">Galería</a></li>
+				<li><a href="4. Contacto.html">Contacto</a></li>
+			</ul> 
+		</nav>
+		
+			<div class="INICIO">
+		<h1 class="siz">INICIO</h1>
+		</div>
+		
+	<section>
+	
+	
+		
+		<h1 class="txin">¡CONVIERTE TUS FOTOS ANTIGUAS EN RECUERDOS VIBRANTES!</h1>
+		<p>¿Tienes fotografías desgastadas por el tiempo? ¿Imágenes en blanco y negro que te gustaría ver a color? En PHOTO-STOCK, restauramos cada detalle, eliminamos imperfecciones y devolvemos la vida a tus recuerdos más preciados. </p>
+		
+
+<h4>Mira este ejemplo del trabajo realizado en esta página:</h4>
+    
+    <div class="continic">
+            <img class="imginic" id="ImagenPrincipal" src="../IMG/IMG_2025.jpg" alt="Imagen principal">
+            <br>
+            <img class="bcambio" id="botonCambio" src="../IMG/button-153684_640.png" alt="Botón de cambio">
+        </div>
+        
+  
+        
+  <h4>¡Transforma la imagen al resultado final que te daremos en Photo-Stock!</h4>
+		
+		<h1>Imagina ver esa foto especial con los colores reales de aquel momento.</h1>
+		<p>¿Y si además pudiera tener una calidad sorprendente gracias a la inteligencia artificial? Nosotros lo hacemos posible.</p>
+		<p>No dejes que el tiempo borre tu historia. Restaura, revive y redescubre tus fotos con nosotros.</p>
+		
+	</section>
+	
+		<footer>
+	    <p>• ©Adrián Morán Morán | 2025 • </p>
+	</footer>
+
+	</body>
+	
+	     <script>
+        document.getElementById("botonCambio").addEventListener("click", function() {
+            let imagen = document.getElementById("ImagenPrincipal");
+            imagen.style.opacity = "0";
+
+            setTimeout(()=> {
+                if (imagen.src.includes("IMG_2025.jpg")) {
+                    imagen.src = "../IMG/IMG_2025c.png"; 
+                } else {
+                    imagen.src = "../IMG/IMG_2025.jpg"; 
+                }
+                imagen.style.opacity = "1";
+            }, 0); 
+        });
+    </script>
+    
+    
+</html>

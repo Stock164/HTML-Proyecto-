@@ -1,0 +1,98 @@
+<!DOCTYPE html>  
+<html lang="es">  
+<head>  
+    <meta charset="UTF-8">  
+    <link rel="stylesheet" href="../CSS/PaginaconMenu.css">  
+    <link rel="stylesheet" href="../CSS/galeria.css">  
+</head>  
+<body>  
+	<header class="header1">   
+		<h1>PHOTO-STOCK</h1>  
+	</header>  
+
+	<nav>  
+		<ul>  
+			<li><a href="1. Pag_Principal.html">Inicio</a></li>  
+			<li><a href="2. Acerca de.html">Acerca de</a></li>  
+			<li><a href="3. Galeria.html">Galería</a></li>  
+			<li><a href="4. Contacto.html">Contacto</a></li>  
+		</ul>   
+	</nav>  
+
+	<div class="INICIO3">  
+		<h1 class="siz">GALERÍA</h1>  
+	</div>  
+
+	<section class="galeria">  
+		<div class="slider">
+			<div class="img-container">
+			    <p>Maracaibo (1910s)</p>
+				<img src="../IMG/mar1.jpg" class="img-before">
+				<img src="../IMG/mar2.png" class="img-after">
+				<input type="range" class="slider-range" min="0" max="100" value="50">
+			</div>
+		</div>
+		
+		<div class="slider">
+			<div class="img-container">
+			    <p>The Beatles en vivo (1962)</p>
+				<img src="../IMG/star.png" class="img-before">
+				<img src="../IMG/star1.png" class="img-after">
+				<input type="range" class="slider-range" min="0" max="100" value="50">
+			</div>
+		</div>
+
+		<div class="slider">
+			<div class="img-container">
+			    <p>Tranvía de Maracaibo (1890s)</p>
+				<img src="../IMG/mb12.webp" class="img-before">
+				<img src="../IMG/mb12Colorized.png" class="img-after">
+				<input type="range" class="slider-range" min="0" max="100" value="50">
+			</div>
+		</div>
+
+		<div class="slider">
+			<div class="img-container">
+			    <p>Basílica de Maracaibo (1940s)</p>
+				<img src="../IMG/bas.jpg" class="img-before">
+				<img src="../IMG/bas1.png" class="img-after">
+				<input type="range" class="slider-range" min="0" max="100" value="50">
+			</div>
+		</div>
+
+		<div class="slider">
+			<div class="img-container">
+			    <p>Berlín (1945)</p>
+				<img src="../IMG/1945.jpg" class="img-before">
+				<img src="../IMG/1945c.png" class="img-after">
+				<input type="range" class="slider-range" min="0" max="100" value="50">
+			</div>
+		</div>
+
+		<div class="slider">
+			<div class="img-container">
+			    <p>The Beatles en vivo (1964)</p>
+				<img src="../IMG/wash.jpg" class="img-before">
+				<img src="../IMG/washc.png" class="img-after">
+				<input type="range" class="slider-range" min="0" max="100" value="50">
+			</div>
+		</div>
+	</section>  
+
+	<footer>  
+	    <p>• ©Adrián Morán Morán | 2025 • </p>  
+	</footer>  
+
+	<script>
+		document.querySelectorAll('.slider').forEach(slider => {
+			const rangeInput = slider.querySelector('.slider-range');
+			const afterImg = slider.querySelector('.img-after');
+
+			rangeInput.addEventListener('input', (e) => {
+				const value = e.target.value;
+				afterImg.style.clipPath = `inset(0 ${100 - value}% 0 0)`;
+			});
+		});
+	</script>
+</body>  
+</html>
